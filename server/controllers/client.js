@@ -7,7 +7,7 @@ import getCountryIso3 from "country-iso-2-to-3";
 export const getProducts = async (req, res) => {
   try {
     const products = await Product.find();
-
+    // this will get all the product info + respective product stats.
     const productsWithStats = await Promise.all(
       products.map(async (product) => {
         const stat = await ProductStat.find({

@@ -1,5 +1,8 @@
 import mongoose from "mongoose";
 
+// const joi = require("joi");
+// const passwordComplexity = require("joi-password-complexity")
+
 const UserSchema = new mongoose.Schema(
   {
     name: {
@@ -35,4 +38,15 @@ const UserSchema = new mongoose.Schema(
 );
 
 const User = mongoose.model("User", UserSchema);
+
+// const validate = (data) => {
+//   const schema = joi.object({
+//     name: joi.string().required().label("Name"),
+//     password: passwordComplexity().required().label("Password")
+//   });
+//   return schema.validate(data)
+// };
+
+// export default {User, validate};
+
 export default User;

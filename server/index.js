@@ -54,11 +54,13 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
     /* ONLY ADD DATA ONE TIME */
+    // console.log("UPLOADING TO MONGO");
     // AffiliateStat.insertMany(dataAffiliateStat);
     // OverallStat.insertMany(dataOverallStat);
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
     // User.insertMany(dataUser);
+    // console.log("UPLOADED TO MONGO");
   })
   .catch((error) => console.log(`${error} did not connect`));

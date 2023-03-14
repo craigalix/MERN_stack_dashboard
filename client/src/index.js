@@ -8,6 +8,8 @@ import { Provider } from "react-redux";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { api } from "state/api";
 
+// not very sure this part... reducer and listener...
+// Tool kit query with redux tool kit.
 const store = configureStore({
   reducer: {
     global: globalReducer,

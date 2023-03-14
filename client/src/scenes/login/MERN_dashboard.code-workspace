@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../CRUD"
+		}
+	],
+	"settings": {
+		"window.zoomLevel": 0
+	}
+}

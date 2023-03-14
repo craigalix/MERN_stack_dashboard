@@ -1,6 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const api = createApi({
+  //REACT_APP_BASE_URL is from .env.local file.
+  // when deploy .env.local will be different for production. macim yaml file.
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
   reducerPath: "adminApi",
   tagTypes: [
@@ -14,10 +16,15 @@ export const api = createApi({
     "Performance",
     "Dashboard",
   ],
+  // endpoint is main logic of api call.
   endpoints: (build) => ({
     getUser: build.query({
       query: (id) => `general/user/${id}`,
       providesTags: ["User"],
+    }),
+    getAllUser: build.query({
+      query: () => `general/user`,
+      providesTags: ["Users"],
     }),
     getProducts: build.query({
       query: () => "client/products",
@@ -60,6 +67,7 @@ export const api = createApi({
 
 export const {
   useGetUserQuery,
+  useGetAllUserQuery,
   useGetProductsQuery,
   useGetCustomersQuery,
   useGetTransactionsQuery,

@@ -144,6 +144,7 @@ const Sidebar = ({
             </Box>
             <List>
               {navItems.map(({ text, icon }) => {
+                // if no icon found, use do smt.
                 if (!icon) {
                   return (
                     <Typography key={text} sx={{ m: "2.25rem 0 1rem 3rem" }}>
